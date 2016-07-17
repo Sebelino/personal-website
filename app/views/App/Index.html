@@ -31,7 +31,11 @@ some links to other pages that may help you identify me:
 </ul>
 
 <h3>Public Diaspora* stream</h3>
-{{.feed}}
+<ul>
+{{range .feed.Items}}
+<li>{{.Title}}</li>
+{{end}}
+</ul>
 <br /><br />
 
 <a href="https://pgp.mit.edu/pks/lookup?op=get&search=0xBFA99599C03F1B51">PGP public key</a>.
