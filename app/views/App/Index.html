@@ -10,6 +10,7 @@
   </div>
 </div>
 
+
 <img src="public/img/sebelino-coat-of-arms.png" width=100px />
 <br />
 <br />
@@ -34,7 +35,7 @@ some links to other pages that may help you identify me:
   <li class="list-group-item active">Public Diaspora* stream</li>
 {{range .feed.Items}}
   <li class="list-group-item">
-    <h4 class="list-group-item-heading" style="font-size:80%;"><a href="{{.Link}}">{{.Published}}</a></h4>
+    <h4 class="list-group-item-heading" style="font-size:80%;"><a href="{{.Link}}">{{datetimefmt .Published}}</a></h4>
     <p class="list-group-item-text">{{raw .Content}}</p>
   </li>
 {{end}}
