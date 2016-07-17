@@ -31,11 +31,12 @@ some links to other pages that may help you identify me:
 </ul>
 
 <h3>Public Diaspora* stream</h3>
-<ul>
 {{range .feed.Items}}
-<li>{{.Title}}</li>
+<div class="panel panel-primary">
+<div class="panel-heading">Posted: XX:XX:XX</div>
+<div class="panel-body">{{raw .Content}}</div>
+</div>
 {{end}}
-</ul>
 <br /><br />
 
 <a href="https://pgp.mit.edu/pks/lookup?op=get&search=0xBFA99599C03F1B51">PGP public key</a>.
