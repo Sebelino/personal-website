@@ -1,21 +1,45 @@
-{{set . "title" "Home"}}
+{{set . "title" "Sebelino's personal website"}}
 {{template "header.html" .}}
 
-<header class="jumbotron" style="background-color:#A9F16C">
+<header class="jumbotron" style="background-color:#F16CA9">
   <div class="container">
     <div class="row">
-      <h1>It works!</h1>
-      <p></p>
+      <h1>Welcome</h1>
+      <p>to Sebelino's website</p>
     </div>
   </div>
 </header>
 
-<div class="container">
-  <div class="row">
-    <div class="span6">
-      {{template "flash.html" .}}
-    </div>
-  </div>
-</div>
+<img src="public/img/sebelino-coat-of-arms.png" width=100px />
+<br />
+<br />
+
+What's up. I am Sebelino, and this is my personal web site.
+As you can see, it is still in its early stages.
+I will look into how to setup Revel to start blogging but for now, here are
+some links to other pages that may help you identify me:
+
+<ul>
+<li><a href="https://github.com/Sebelino">GitHub</a></li>
+<li><a href="http://www.nada.kth.se/~seo/">KTH</a></li>
+<li><a href="https://www.youtube.com/user/Sebelino7">YouTube</a></li>
+<li><a href="https://se.linkedin.com/in/sebastian-olsson-36108350">Linkedin</a></li>
+<li><a href="https://www.speedrun.com/user/Sebelino">Speedrun.com</a></li>
+<li><a href="http://www.romhacking.net/forum/index.php?action=profile;area=showposts;u=24325">Romhacking.net</a></li>
+<li><a href="https://joindiaspora.com/people/320fe5d00af80134fee40242ac110004">Diaspora*</a></li>
+<li><a href="http://www.pluggakuten.se/forumserver/profile.php?id=8738">Pluggakuten</a></li>
+</ul>
+
+<h3>Public Diaspora* stream</h3>
+{{.feed}}
+<br /><br />
+
+<a href="https://pgp.mit.edu/pks/lookup?op=get&search=0xBFA99599C03F1B51">PGP public key</a>.
+<br />
+Fingerprint: <b>5FD5 A4F4 ECB2 6418 2D3F  75B0 BFA9 9599 C03F 1B51</b>
+<br />
+<img src="http://knackforge.com/sites/default/files/AWS_Logo_PoweredBy_300px_0.jpg" />
 
 {{template "footer.html" .}}
+
+
