@@ -30,13 +30,15 @@ some links to other pages that may help you identify me:
 <li><a href="http://www.pluggakuten.se/forumserver/profile.php?id=8738">Pluggakuten</a></li>
 </ul>
 
-<h3>Public Diaspora* stream</h3>
+<ul class="list-group">
+  <li class="list-group-item active">Public Diaspora* stream</li>
 {{range .feed.Items}}
-<div class="panel panel-primary">
-<div class="panel-heading">Posted: XX:XX:XX</div>
-<div class="panel-body">{{raw .Content}}</div>
-</div>
+  <li class="list-group-item">
+    <h4 class="list-group-item-heading" style="font-size:80%;"><a href="{{.Link}}">{{.Published}}</a></h4>
+    <p class="list-group-item-text">{{raw .Content}}</p>
+  </li>
 {{end}}
+</ul>
 <br /><br />
 
 <a href="https://pgp.mit.edu/pks/lookup?op=get&search=0xBFA99599C03F1B51">PGP public key</a>.
