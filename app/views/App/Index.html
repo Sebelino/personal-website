@@ -10,36 +10,36 @@
   </div>
 </div>
 
+<div class="bs-docs-section">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="bs-component">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">About</h3>
+          </div>
+          <div class="panel-body">
+            {{template "App/about.html"}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="bs-component">
+        <ul class="list-group">
+          <li class="list-group-item active">Public Diaspora* stream</li>
+          {{range .feed.Items}}
+          <li class="list-group-item">
+            <h4 class="list-group-item-heading" style="font-size:80%;"><a href="{{.Link}}">{{datetimefmt .Published}}</a></h4>
+            <p class="list-group-item-text">{{raw .Content}}</p>
+          </li>
+          {{end}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
-<img src="public/img/sebelino-coat-of-arms.png" width=100px />
-<br />
-<br />
-
-What's up. I am Sebelino, and this is my personal web site.
-As you can see, it is still in its early stages.
-I will look into how to setup Revel to start blogging but for now, here are
-some links to other pages that may help you identify me:
-
-<ul>
-<li><a href="https://github.com/Sebelino">GitHub</a></li>
-<li><a href="http://www.nada.kth.se/~seo/">KTH</a></li>
-<li><a href="https://www.youtube.com/user/Sebelino7">YouTube</a></li>
-<li><a href="https://se.linkedin.com/in/sebastian-olsson-36108350">Linkedin</a></li>
-<li><a href="https://www.speedrun.com/user/Sebelino">Speedrun.com</a></li>
-<li><a href="http://www.romhacking.net/forum/index.php?action=profile;area=showposts;u=24325">Romhacking.net</a></li>
-<li><a href="https://joindiaspora.com/people/320fe5d00af80134fee40242ac110004">Diaspora*</a></li>
-<li><a href="http://www.pluggakuten.se/forumserver/profile.php?id=8738">Pluggakuten</a></li>
-</ul>
-
-<ul class="list-group">
-  <li class="list-group-item active">Public Diaspora* stream</li>
-{{range .feed.Items}}
-  <li class="list-group-item">
-    <h4 class="list-group-item-heading" style="font-size:80%;"><a href="{{.Link}}">{{datetimefmt .Published}}</a></h4>
-    <p class="list-group-item-text">{{raw .Content}}</p>
-  </li>
-{{end}}
-</ul>
 <br /><br />
 
 <a href="https://pgp.mit.edu/pks/lookup?op=get&search=0xBFA99599C03F1B51">PGP public key</a>.
