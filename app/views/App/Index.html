@@ -31,7 +31,11 @@
       <div class="col-lg-6">
         <div class="bs-component">
           <ul class="list-group">
-            <li class="list-group-item active">Public Diaspora* stream</li>
+            <li class="list-group-item list-group-item-success">
+              <h3 class="panel-title">
+                <a href="https://joindiaspora.com/public/sebelino">Public Diaspora* stream</a>
+              </h3>
+            </li>
             {{range .feed.Items}}
             <li class="list-group-item">
               <h4 class="list-group-item-heading" style="font-size:80%;"><a href="{{.Link}}">{{datetimefmt .Published}}</a></h4>
