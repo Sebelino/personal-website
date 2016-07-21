@@ -1,0 +1,22 @@
+a, .panel-title>a {
+    color: #0ee;
+}
+
+a:hover {
+    color: #088;
+}
+
+a:active {
+    color: #8ff;
+}
+
+/*
+.list-group-item.active {
+    background-color: #3c3c3c;
+}
+*/
+
+/* Font Awesome */
+.fa-stack-1x {
+    color: #000;
+}
