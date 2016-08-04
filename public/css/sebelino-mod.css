@@ -1,3 +1,9 @@
+/** Revel debug.html sidebar */
+#sidebar {
+    background-color: #000 !important;
+    color: #0c0;
+}
+
 a, .panel-title>a {
     color: #0ee;
 }
