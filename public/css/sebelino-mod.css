@@ -22,6 +22,10 @@ a:active {
 }
 */
 
+code {
+    background-color: #010;
+}
+
 /* Font Awesome */
 .fa-stack-1x {
     color: #000;
