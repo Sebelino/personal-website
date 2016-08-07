@@ -30,3 +30,7 @@ code {
 .fa-stack-1x {
     color: #000;
 }
+
+li.list-group-item > p > img {
+	width: 100%;
+}
