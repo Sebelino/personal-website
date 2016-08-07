@@ -16,6 +16,13 @@ func init() {
     }
 }
 
+func min(x, y int) int {
+    if x < y {
+        return x
+    }
+    return y
+}
+
 type App struct {
 	*revel.Controller
 }
@@ -23,5 +30,7 @@ type App struct {
 func (c App) Index() revel.Result {
     fp := gofeed.NewParser()
     feed, _ := fp.ParseURL("https://joindiaspora.com/public/sebelino.atom")
+    feedsize := min(5, len(feed.Items))
+    feed.Items = feed.Items[:feedsize]
 	return c.Render(feed)
 }
