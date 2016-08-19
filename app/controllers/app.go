@@ -57,7 +57,7 @@ func (c App) Index() revel.Result {
     feed, _ := fp.ParseURL("https://joindiaspora.com/public/sebelino.atom")
     upperBound := 5
     selectedPosts := make([]*gofeed.Item, 0, upperBound)
-    for i, element := range feed.Items {
+    for _, element := range feed.Items {
         jsonurl := element.Link+".json"
         post := url2post(jsonurl)
         if post.Author.DiasporaID == "sebelino@joindiaspora.com" {
