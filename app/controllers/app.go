@@ -54,7 +54,10 @@ func url2post(url string) Post {
 
 func (c App) Index() revel.Result {
     fp := gofeed.NewParser()
-    feed, _ := fp.ParseURL("https://joindiaspora.com/public/sebelino.atom")
+    feed, err := fp.ParseURL("https://joindiaspora.com/public/sebelino.atom")
+	if err != nil {
+		return c.Render()
+	}
     upperBound := 5
     selectedPosts := make([]*gofeed.Item, 0, upperBound)
     for _, element := range feed.Items {
